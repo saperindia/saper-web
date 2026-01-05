@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <title>Saper Ind | Projects & Resources</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            display: ['Inter', 'sans-serif'], // Added for consistency
+          },
+          colors: {
+            saper: {
+              bg: '#F4F4F2',       // Lightest Beige/Grey for background
+              surface: '#FFFFFF',  // White for cards/sections
+              black: '#0F0F0F',    // Primary Text
+              charcoal: '#1A1A1A', // Softer Black
+              gray: '#666666',     // Secondary Text
+              muted: '#A3A3A3',    // Disabled/Subtle
+              border: '#E5E5E5',   // Borders
+              primary: '#059669',  // Darker Emerald for better contrast
+              'primary-light': '#34D399', // Light variant for dark backgrounds
+              accent: '#C04E16',   // Secondary Accent (Orange)
+              // Semantic colors for easy theme management
+              dark: '#0A0A0A',     // Dark backgrounds (replaces bg-black, bg-[#0F0F0F])
+              light: '#FFFFFF',    // Light elements (replaces bg-white, text-white)
+              overlay: 'rgba(0, 0, 0, 0.4)', // Modal overlays
+              'header-bg': 'rgba(15, 15, 15, 0.3)', // Header background
+            }
+          },
+          fontSize: {
+            'huge': '10dvw',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      /* Offset for fixed header */
+    }
+
+    @media (min-width: 1024px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
+    body {
+      background-color: #F2F2F2;
+      color: #0F0F0F;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background-color: #0F0F0F;
+      color: #FFFFFF;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
