@@ -58,16 +58,16 @@ const Footer: React.FC<FooterProps> = ({ onOpenContact, onOpenLegal }) => {
             </div>
          </div>
 
-         <div className="flex flex-col gap-4 md:flex-row justify-between items-start md:items-center mt-8 md:mt-12 text-xs font-bold text-saper-muted">
-            <span>{SITE_INFO.copyright}</span>
-            <div className="flex flex-col md:flex-row gap-2 md:gap-4 md:items-center">
+         <div className="flex flex-col gap-6 md:flex-row justify-between items-center md:items-center mt-8 md:mt-12 text-xs font-bold text-saper-muted text-center md:text-left">
+            <span>Saper Ind Projects & Resources</span>
+            <div className="flex flex-row gap-4 items-center">
                <button
                   onClick={() => onOpenLegal('privacy')}
                   className="hover:text-saper-primary transition-colors cursor-pointer text-left"
                >
                   Privacy Policy
                </button>
-               <span className="hidden md:inline text-saper-muted/50">•</span>
+               <span className="text-saper-muted/50">•</span>
                <button
                   onClick={() => onOpenLegal('terms')}
                   className="hover:text-saper-primary transition-colors cursor-pointer text-left"

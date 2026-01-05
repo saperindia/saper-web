@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight } from 'lucide-react';
 import { NAVBAR_LINKS, SITE_INFO } from '../constants';
-import Logo from './Logo';
+
 
 interface MobileMenuProps {
     isOpen: boolean;
@@ -35,7 +35,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onOpenContact 
                         <div className="flex flex-col gap-10 pb-10">
                             {/* Header */}
                             <div className="flex items-center justify-between">
-                                <Logo />
+                                <span className="text-xl font-bold tracking-tight text-saper-light">
+                                    {SITE_INFO.brandName.toLowerCase()}.
+                                </span>
                                 <button
                                     onClick={onClose}
                                     className="p-2.5 bg-white/5 rounded-full text-saper-light hover:bg-white/10 transition-colors border border-white/5"
